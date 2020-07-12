@@ -10,14 +10,14 @@ function InputGroup() {
          <div className="form-row">
             <div className="col">
                <span className="col-1"></span>
-               <input className="col-10 mt-4 mb-3 form-control" id="email" type="text" size="60" placeholder="Email" />
+               <input className="col-10 mt-4 mb-3 form-control modal_window_input" id="email" type="text" size="60" placeholder="Email" />
             </div>
          </div>
 
          <div className="form-row">
             <div className="col">
                <span className="col-1"></span>
-               <input className="col-10 mt-3 mb-4 form-control" id="password" type="text" size="60" placeholder="Password" />
+               <input className="col-10 mt-3 mb-4 form-control modal_window_input" id="password" type="text" size="60" placeholder="Password" />
             </div>
          </div>
 

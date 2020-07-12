@@ -9,9 +9,6 @@ class LoginForm extends Component {
    render() {
       return (
          <div>
-            <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-               Запустить модальное окно
-            </button>
             <div className="modal" id="exampleModal" tabIndex="-1" role="dialog"
                aria-labelledby="exampleModal" aria-hidden="true">
                <div className="modal-dialog modal-dialog-centered" role="document">

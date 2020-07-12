@@ -1,0 +1,28 @@
+.inline{
+   display: inline-block;
+}
+
+.right_image{
+   width: 100%;
+}
+
+.inputGroup{
+   height: 80%;
+}
+
+.fullWidth{
+   width: 100%;
+}
+
+.loginPage_input{
+   height: 50px;
+   border: 0;
+   background-color: rgb(236, 236, 236);
+}
+
+.login_button{
+   height: 50px;
+   border: 0;
+   background-color: rgb(255, 111, 71);
+   color: white;
+}
