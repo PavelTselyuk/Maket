@@ -1,5 +1,6 @@
 .modal_window{
    width: 430px;
+   font-family: Gill Sans, sans-serif, serif;
 }
 
 .modal_window .form-row{
@@ -36,6 +37,8 @@
    border: 3px solid black;
    display: inline;
    height: 45px;
+   font-size: small;
+   font-weight: 500;
 }
 
 .additional{
