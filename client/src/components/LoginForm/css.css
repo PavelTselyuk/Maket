@@ -1,0 +1,38 @@
+.modal_window{
+   width: 430px;
+}
+
+.modal_window .form-row{
+   width: 430px;
+}
+
+.modal_window .top_text{
+   font-weight: bold;
+}
+
+.modal_window .google_button{
+   border: 3px solid black;
+   font-weight: bold;
+}
+.modal_window .google_button:hover{
+   cursor: pointer;
+   background-color: #fff;
+   color: #343a40;
+}
+
+.modal_window .or_text{
+   color: grey;
+   margin-bottom: 0;
+}
+
+.googleImage{
+   width: 15px;
+   height: 15px;
+	margin-bottom	: 3px;
+}
+
+.form-control{
+   border: 3px solid black;
+   display: inline;
+   height: 45px;
+}
