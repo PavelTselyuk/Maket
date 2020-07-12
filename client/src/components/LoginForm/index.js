@@ -3,6 +3,7 @@ import googleImage from './google.png'
 
 import './css.css'
 import InputGroup from './InputGroup'
+import AdditionalLinks from './AdditionalLinks'
 
 class LoginForm extends Component {
    render() {
@@ -15,12 +16,12 @@ class LoginForm extends Component {
                aria-labelledby="exampleModal" aria-hidden="true">
                <div className="modal-dialog modal-dialog-centered" role="document">
                   <div className="modal-content modal_window">
-                     <div className="modal-header">
+                     {/* <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                            <span aria-hidden="true">&times;</span>
                         </button>
-                     </div>
+                     </div> */}
                      <div className="modal-body">
                         <p className="top_text text-center">Log in to collaborate on "Schools"</p>
                         <span className="col-1"></span>
@@ -29,6 +30,7 @@ class LoginForm extends Component {
                            Log in with Google</button>
                         <p className="or_text text-center">or</p>
                         <InputGroup />
+                        <AdditionalLinks />
                      </div>
                      {/* <div className="modal-footer">
                         <button type="button" className="btn btn-primary">Save changes</button>

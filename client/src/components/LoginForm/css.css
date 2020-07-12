@@ -14,6 +14,7 @@
    border: 3px solid black;
    font-weight: bold;
 }
+
 .modal_window .google_button:hover{
    cursor: pointer;
    background-color: #fff;
@@ -35,4 +36,25 @@
    border: 3px solid black;
    display: inline;
    height: 45px;
+}
+
+.additional{
+   font-size: small;
+}
+
+.bottom_text{
+   color: grey;
+}
+
+.login_button{
+   color: white;
+   background-color: black;
+   font-weight: bold;
+   height: 45px;
+}
+
+.login_button:hover{
+   cursor: pointer;
+   background-color: black;
+   color: white;
 }
