@@ -14,7 +14,7 @@ function LoginLeftSide() {
          <div className="row align-items-center ml-5 inputGroup">
             <LoginInputs />
          </div>
-         <p className="text-center">© 2020 EnSchool by Tapson. All rights reserved.</p>
+         <p className="text-center bottom_text">© 2020 EnSchool by Tapson. All rights reserved.</p>
       </div>
 
    );

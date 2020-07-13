@@ -35,7 +35,7 @@ function LoginInputs() {
             <button type="button" className="btn btn-primary col login_button justify-content-between" data-toggle="modal" data-target="#exampleModal">
                <div className="form-row justify-content-between fullWidth">
                   <span></span>
-                  <span>Войти</span>
+                  <span className="font_weight-norm">Войти</span>
                   <span>→</span>
                </div>
             </button>

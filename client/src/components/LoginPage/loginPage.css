@@ -22,6 +22,10 @@
    background-color: rgb(236, 236, 236);
 }
 
+.above_inputs{
+   font-size: smaller;
+}
+
 .login_button{
    height: 50px;
    border: 0;
@@ -44,4 +48,13 @@ i{
 
 i:hover{
    cursor: pointer;
+}
+
+.font_weight-norm{
+   font-weight: normal;
+}
+
+.bottom_text{
+   font-size: smaller;
+   color: rgb(172, 172, 172);
 }
