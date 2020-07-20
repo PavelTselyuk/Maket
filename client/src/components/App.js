@@ -6,7 +6,6 @@ import LoginPageNoBootstrap from './LoginPageNoBootstrap'
 function App() {
   return (
     <div className="App">
-      <LoginForm />
       <LoginPageNoBootstrap />
     </div>
   );

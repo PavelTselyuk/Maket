@@ -1,14 +1,34 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
-.image{
-   width: 94%;
+html{
+   height: 100%;
 }
+
+body{
+   height: 100%;
+}
+
+#root{
+   height: 100%;
+}
+
+.App{
+   height: 100%;
+}
+
+.main_div{
+   height: 100%;
+}
+
+
 
 .main_flex-container{
    display: flex;
    justify-content: space-between;
-   /* width: 100%; */
    flex-wrap: wrap;
+   
+   height: 100%;
 }
 
 .img_container{
@@ -17,6 +37,12 @@
    min-width: 100px;
    width: 100%;
    justify-content: flex-end;
+   max-height: 100vmin;
+}
+
+.image{
+   max-height: 100vmin;
+   width: 100%;
 }
 
 .left-side_container{
@@ -26,9 +52,10 @@
    justify-content: space-between;
    align-items: center;
    max-width: 80%;
-   max-height: 80%;
-   margin-top: 3%;
+   max-height: 100%;
    margin-left: 5%; 
+   padding-top: 3%;
+   height: 100%;
 }
 
 .logo{
@@ -42,9 +69,18 @@
    justify-content: center;
 }
 
+.voydite_nadpis{
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 600;
+   font-size: 1.4rem;
+   color: rgb(97, 97, 97);
+}
+
 .inputs_form{
    width: 90%;
    margin-top: 30px;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
 }
 
 .loginPage_inputs{
@@ -57,11 +93,11 @@
 }
 
 .password_input{
-   height: 50px;
+   height: 100%;
    border: 0;
    background-color: rgb(236, 236, 236);
    border-radius: 4px;
-   width: 90%;
+   width: 87%;
 }
 
 .with_icon{
@@ -81,6 +117,19 @@
    color: white;
    width: 90%;
    margin-top: 16px;
+   font-weight: 400;
+}
+
+.login_button:focus, .login_input:focus, .password_input:focus{
+   outline: none;
+}
+
+.login_input, .password_input{
+   padding-left: 10px;
+}
+
+.loginPage_inputs:focus-within{
+   border: 1px solid #007bff;
 }
 
 .login_button_div{
@@ -98,43 +147,12 @@
    color: rgb(77, 77, 77);
 }
 
-.voydite_nadpis{
-   color: rgb(97, 97, 97);
-}
-
 .bottom_text{
    font-size: 90%;
    color: rgb(172, 172, 172);
-   margin-left: 50px;
    margin-bottom: 50px;
    align-self: start;
 }
-/* earlier */
-/* .inline{
-   display: inline-block;
-}
-
-.right_image{
-   width: 100%;
-}
-
-.fullWidth{
-   width: 100%;
-}
-
-.above_inputs{
-   font-size: smaller;
-}
-
-
-.font_weight-norm{
-   font-weight: normal;
-}
-
-.bottom_text{
-   font-size: smaller;
-   color: rgb(172, 172, 172);
-}*/
 
 i{
    margin-left: 5px;

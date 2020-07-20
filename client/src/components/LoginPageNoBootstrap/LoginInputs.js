@@ -7,8 +7,8 @@ function LoginInputs() {
 
    return (
       <div className="">
-         <div className="voydite_nadpis">
-            <h3>Войдите в свой аккаунт</h3>
+         <div >
+            <h3 className="voydite_nadpis">Войдите в свой аккаунт</h3>
          </div>
          <form className="inputs_form">
             <div className="above_inputs">
