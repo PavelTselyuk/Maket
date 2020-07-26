@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import './profile.css'
+import avatar from './avatar.jpg'
 
 
 function GroupsNStudents() {
@@ -12,9 +13,19 @@ function GroupsNStudents() {
    ]);
 
    let [students, setStudents] = useState([
-      { id: 1, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%" },
-      { id: 2, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%" },
-      { id: 3, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%" }
+      { id: 1, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 2, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 3, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 4, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 5, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 6, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 7, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 8, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 9, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 10, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 11, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 12, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
+      { id: 13, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar }
    ]);
 
    let [activeGroup, setActiveGroup] = useState({ name: 304, id: 1, level: 'Beginner', quantity: 12 });
@@ -39,11 +50,11 @@ function GroupsNStudents() {
 
    let studentsList = students.map((student, index) => (
       <tr className="profile_studentFromList" key={student.id}>
-         <td>{index+1} </td>
-         <td>{student.name}</td>
+         <td className="profile_TableOfStudents№">{index+1} </td>
+         <td><img className="photo" src={student.photo} alt="Ava" /> {student.name}</td>
          <td>{student.marks}</td>
          <td>{student.attendance}</td>
-         <td>{student.done}</td>
+         <td className="profile_TableOfStudentsDone">{student.done}</td>
       </tr>
    ));
 
@@ -79,20 +90,22 @@ function GroupsNStudents() {
             </div>
 
             <div className="profile_listOfStudents">
-               <table>
-                  <thead>
-                     <tr>
-                        <th scope="col">№</th>
-                        <th scope="col">Студент</th>
-                        <th scope="col">Успеваемость</th>
-                        <th scope="col">Посещение, ч</th>
-                        <th scope="col">Пройдено</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     {studentsList}
-                  </tbody>
-               </table>
+               <div className="profile_listOfStudents_tableWrapper">
+                  <table className="profile_tableOfStudents">
+                     <thead className="profile_headOfTableOfStudents">
+                        <tr>
+                           <th scope="col" className="profile_TableOfStudents№">№</th>
+                           <th scope="col">Студент</th>
+                           <th scope="col">Успеваемость</th>
+                           <th scope="col">Посещение, ч</th>
+                           <th scope="col" className="profile_TableOfStudentsDone">Пройдено</th>
+                        </tr>
+                     </thead>
+                     <tbody className="profile_bodyOfTableOfStudents">
+                        {studentsList}
+                     </tbody>
+                  </table>
+               </div>
             </div>
          </div>
       </div>
