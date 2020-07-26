@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.main_profile_div{
+   height: 100%;
+}
+
+.main_profile_flex-container{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   width: 100%;
+   height: 100%;
+}
+
+.profile_header, .profile_content{
+   border: 1px solid blue;
+   display: flex;
+}
+
+.left_navbar, .profile_content-right_part{
+   border: 1px solid green;
+   display: flex;
+}
+
+.profile_header{
+   flex: 1 1 0;
+   display: flex;
+   max-height: 10%;
+   padding-left: 2%;
+   padding-right: 2%;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.profile_content{
+   flex: 10 3 0;
+   display: flex;
+}
+
+.left_navbar{
+   border: 1px solid green;
+   display: flex;
+   flex: 6 1 0;
+   padding: 2%;
+   padding-right: 2%;
+   padding-left: 3%;
+   background-color: rgb(248, 249, 251);
+}
+
+.profile_content-right_part{
+   border: 1px solid green;
+   display: flex;
+   flex: 23 3 0;
+   flex-direction: column;
+   padding-top: 2%;
+   padding-left: 0%;
+   padding-right: 3%;
+   background-color: rgb(248, 249, 251);   
+}
+
+.profile_LeftNavbar-content{
+   border: 1px solid rebeccapurple;
+   border-radius: 15px;
+   flex: 1 1 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   background-color: white; 
+   padding-top: 15%;
+}
+
+.profile_LeftNavbar_options{
+   flex: 8 1 0;
+   list-style: none;
+   width: 100%;
+   padding: 0%;
+}
+
+.sidebar_icons{
+   margin-right: 5%;
+}
+
+.profile_LeftNavbar_settings{
+   flex: 1 1 0;
+   height: 11%;
+   min-height: 30px;
+   list-style: none;
+   width: 100%;
+   padding: 0%;
+}
+
+.profile_LeftNavbar_li{
+   height: 11%;
+   min-height: 30px;
+   width: 100%;
+}
+
+.profile_navbar_link{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: rgb(173, 173, 173);
+}
+
+.profile_navbar_link:hover{
+   text-decoration: none;
+}
+
+.profile_LeftNavbar_li .active{
+   background-color: rgb(233, 232, 232);
+   color: rgb(92, 106, 255);
+   border-left: 2px solid rgb(92, 106, 255);;
+}
+
+.profile_settings{
+   height: 88%;
+   min-height: 30px;
+   width: 100%;
+}
+
+.profile_settings{
+   height: 88%;
+   min-height: 30px;
+   width: 100%;
+}
+
+
+.profile_GroupsNStudents{
+   border: 1px solid rebeccapurple;
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 0;   
+   background-color: white; 
+}
+
+.profile_listOfGroups{
+   flex: 1 0 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border: 1px solid teal;
+}
+
+.profile_listOfGroups_groups{
+   flex: 10 1 0;
+   align-items: center;
+   display: flex;
+   padding-left: 40px;
+   padding-right: 80px;
+}
+
+.profile_groupsNav{
+   display: flex;
+   margin: 0;
+   width: 100%;
+   padding: 0;
+   list-style: none;
+}
+
+.profile_groupNavItem{
+   min-width: 60px;
+   display: flex;
+   justify-content: center;
+   width: 15%;
+}
+
+
+.profile_group_NavItem_Link{
+   flex: 1 1 0;
+   display: flex;
+   justify-content: center;
+   border-bottom: 2px solid rgb(192, 192, 192);
+}
+
+.profile_group_NavItem_Link.active{
+   border-bottom: 2px solid rgb(166, 87, 197);
+}
+
+.underlined_gray_tagli{
+   flex: 1 1 0;
+   border-bottom: 2px solid rgb(192, 192, 192);
+}
+
+
+.underlined_gray_tag{
+   width: 100%;
+   border-bottom: 2px solid rgb(192, 192, 192);
+}
+
+.profile_listOfGroups_addGroup{
+   display: flex;
+   height: 70%;
+   flex: 2 1 0;
+   min-height: 30px;
+   min-width: 130px;
+}
+
+.addGroup{
+   width: 100%;
+   height: 100%;
+   border: 0;
+   border-radius: 5px;
+   background-color: coral;
+   color: white;
+}
+
+.profile_groupNumber{
+   flex: 2 0 0;
+   max-height: 75px;
+   border: 1px solid teal;
+   padding-left: 40px;
+   padding-top: 10px;
+}
+
+.profile_groupNumber_h2{
+   margin-bottom: 0;
+}
+
+.profile_groupNumber_innerDiv{
+   display: flex;
+   justify-content: space-between;
+}
+
+.profile_groupNumber_span{
+   margin-bottom: 0;
+   color: rgb(163, 163, 163);
+}
+
+
+.profile_listOfStudents{
+   flex: 10 0 0;
+   border: 1px solid teal;
+}
+
+.profile_header_logo{
+   height: 85%;
+   flex: 7 1 0;
+}
+
+.profile_header_logo_img{
+   height: 100%;
+}
+
+.profile_search_div{
+   height: 60%;
+   border: 0;
+   flex: 16 1 0;
+   display: flex;
+   align-items: center;
+
+}
+
+.profile_search_inner_div{
+   display: flex;
+   align-items: center;
+   height: 90%;
+   width: 50%;
+   background-color: rgb(236, 236, 236);
+   border-radius: 4px;
+   padding-left: 2.5%;
+}
+
+.profile_search_input{
+   border: none;
+   background-color: rgb(236, 236, 236);
+   color: rgb(155, 155, 155);
+   width: 100%;
+}
+
+.profile_search_input:focus{
+   border: none;
+   outline: none;
+}
+
+.magnifier{
+   color: rgb(155, 155, 155);
+}
+
+.profile_search_input::placeholder {
+   color: rgb(155, 155, 155);
+   font-size: 1.1em;
+}
+
+.avatarNName{
+   height: 60%;
+   display: flex;
+   align-items: center;
+   flex: 5 1 0;
+}
+
+.profile_userName_div{
+   padding-left: 5%;
+}
+
+.avatar{
+   height: 40px;
+   flex: 0 1 40px;
+   border-radius: 17%;
+}
+
+.bell-icon{
+   flex: 1 0 40px;
+   font-size: 37px;
+}
+
