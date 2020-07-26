@@ -11,6 +11,12 @@ function GroupsNStudents() {
       { name: 306, id: 3, level: 'Advanced', quantity: 14 }
    ]);
 
+   let [students, setStudents] = useState([
+      { id: 1, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%" },
+      { id: 2, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%" },
+      { id: 3, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%" }
+   ]);
+
    let [activeGroup, setActiveGroup] = useState({ name: 304, id: 1, level: 'Beginner', quantity: 12 });
 
    let changeActiveGroup = e => {
@@ -29,6 +35,16 @@ function GroupsNStudents() {
             {group.name}
          </NavLink>
       </li>
+   ));
+
+   let studentsList = students.map((student, index) => (
+      <tr className="profile_studentFromList" key={student.id}>
+         <td>{index+1} </td>
+         <td>{student.name}</td>
+         <td>{student.marks}</td>
+         <td>{student.attendance}</td>
+         <td>{student.done}</td>
+      </tr>
    ));
 
 
@@ -74,27 +90,7 @@ function GroupsNStudents() {
                      </tr>
                   </thead>
                   <tbody>
-                     <tr>
-                        <td>1</td>
-                        <td>Петров</td>
-                        <td>9</td>
-                        <td>75/102</td>
-                        <td>57%</td>
-                     </tr>
-                     <tr>
-                        <td>2</td>
-                        <td>Петров</td>
-                        <td>6</td>
-                        <td>75/102</td>
-                        <td>57%</td>
-                     </tr>
-                     <tr>
-                        <td>3</td>
-                        <td>Петров</td>
-                        <td>7</td>
-                        <td>75/102</td>
-                        <td>57%</td>
-                     </tr>
+                     {studentsList}
                   </tbody>
                </table>
             </div>
