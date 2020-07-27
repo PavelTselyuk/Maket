@@ -13,19 +13,19 @@ function GroupsNStudents() {
    ]);
 
    let [students, setStudents] = useState([
-      { id: 1, name: "Петров Стас", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 2, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 3, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 4, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 5, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 6, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 7, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 8, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 9, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 10, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 11, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 12, name: "Сидоров Влад", marks: 7, attendance: "75/102", done: "50%", photo: avatar },
-      { id: 13, name: "Конева Юля", marks: 7, attendance: "75/102", done: "50%", photo: avatar }
+      { id: 1, name: "Петров Стас", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 2, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 3, name: "Конева Юля", marks: 9.1, attendance: "75", done: "50%", photo: avatar },
+      { id: 4, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 5, name: "Конева Юля", marks: 3.9, attendance: "75", done: "50%", photo: avatar },
+      { id: 6, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 7, name: "Конева Юля", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 8, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 9, name: "Конева Юля", marks: 9.3, attendance: "75", done: "50%", photo: avatar },
+      { id: 10, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 11, name: "Конева Юля", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 12, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
+      { id: 13, name: "Конева Юля", marks: 3.7, attendance: "75", done: "50%", photo: avatar }
    ]);
 
    let [activeGroup, setActiveGroup] = useState({ name: 304, id: 1, level: 'Beginner', quantity: 12 });
@@ -43,20 +43,37 @@ function GroupsNStudents() {
       <li className="profile_groupNavItem" key={group.id}>
          <NavLink to={`/groups/${group.id}`} id={group.id} data-level={group.level} data-quantity={group.quantity}
             className="profile_group_NavItem_Link" onClick={(e) => changeActiveGroup(e)}>
-            {group.name}
+            Группа {group.name}
          </NavLink>
       </li>
    ));
 
-   let studentsList = students.map((student, index) => (
-      <tr className="profile_studentFromList" key={student.id}>
-         <td className="profile_TableOfStudents№">{index+1} </td>
-         <td><img className="photo" src={student.photo} alt="Ava" /> {student.name}</td>
-         <td>{student.marks}</td>
-         <td>{student.attendance}</td>
-         <td className="profile_TableOfStudentsDone">{student.done}</td>
-      </tr>
-   ));
+   let maxMark = Math.max(...(students.map(student => (student.marks))));
+   console.log(maxMark);
+   let studentsList = students.map((student, index) => {
+      return (
+         <tr className="profile_studentFromList" key={student.id}>
+            <td className="profile_TableOfStudents№">{index + 1} </td>
+            <td><img className="photo" src={student.photo} alt="Ava" /> {student.name}</td>
+            <td className="td_with_icon">
+               {student.marks == maxMark && student.marks > 4 ?
+                  <span className="material-icons profile_studentFromListIcon">star</span> : ""
+               }
+               {student.marks > 9 && student.marks != maxMark ?
+                  <span className="material-icons profile_studentFromListIcon">stars</span> : ""
+               }
+               {student.marks <= 4 ?
+                  <span className="material-icons profile_studentFromListIcon">error</span> : ""
+               }
+               {student.marks < 9 && student.marks != maxMark && student.marks > 4 ? <span className="profile_studentFromListPseudoIcon"></span> : ""}
+
+               <span className="profile_studentFromListMark">{student.marks}</span></td>
+            <td>{student.attendance}<span className="profile_studentFromListAttendance">/102</span></td>
+            <td className="profile_TableOfStudentsDone">{student.done}</td>
+         </tr >
+      )
+   }
+   );
 
 
 
