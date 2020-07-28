@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './profile.css'
 import logo from './logo.jpg'
 import avatar from './avatar.jpg'
 
 function Header() {
+   let [notificationCounter, setNotificationCounter] = useState(1);
+
+   let addNotificationCounter = () => {
+      setNotificationCounter(notificationCounter + 1);
+   }
+
+   let clearNotificationCounter = () => {
+      setNotificationCounter(0);
+   }
+
    return (
       <div className="profile_header">
          <div className="profile_header_logo">
@@ -20,14 +30,21 @@ function Header() {
 
 
          <div className="avatarNName">
-            <span className="material-icons bell-icon">notifications_none</span>
+            <div className="notifications_group">
+               <div className="profile_notifications_counter_div">
+                  <div className={notificationCounter > 0 ?
+                     "profile_notifications_counter addcount" : "profile_notifications_counter"}
+                     data-count={notificationCounter}></div>
+                  <span className="material-icons bell-icon">notifications_none</span>
+               </div>
+            </div>
             <img className="avatar" src={avatar} alt="Avatar" />
             <div className="profile_userName_div">
                <span className="profile_userName">Имя Фамилия</span>
             </div>
          </div>
 
-      </div>
+      </div >
    );
 }
 

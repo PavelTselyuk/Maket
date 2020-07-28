@@ -13,19 +13,19 @@ function GroupsNStudents() {
    ]);
 
    let [students, setStudents] = useState([
-      { id: 1, name: "Петров Стас", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 2, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 3, name: "Конева Юля", marks: 9.1, attendance: "75", done: "50%", photo: avatar },
-      { id: 4, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 5, name: "Конева Юля", marks: 3.9, attendance: "75", done: "50%", photo: avatar },
-      { id: 6, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 7, name: "Конева Юля", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 8, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 9, name: "Конева Юля", marks: 9.3, attendance: "75", done: "50%", photo: avatar },
-      { id: 10, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 11, name: "Конева Юля", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 12, name: "Сидоров Влад", marks: 7, attendance: "75", done: "50%", photo: avatar },
-      { id: 13, name: "Конева Юля", marks: 3.7, attendance: "75", done: "50%", photo: avatar }
+      { id: 1, name: "Петров Стас",    marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 2, name: "Сидоров Влад",   marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 3, name: "Конева Юля",     marks: 9.1, attendance: "75",  done: "50%",  photo: avatar },
+      { id: 4, name: "Сидоров Влад",   marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 5, name: "Конева Юля",     marks: 3.9, attendance: "75",  done: "50%",  photo: avatar },
+      { id: 6, name: "Сидоров Влад",   marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 7, name: "Конева Юля",     marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 8, name: "Сидоров Влад",   marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 9, name: "Конева Юля",     marks: 9.3, attendance: "75",  done: "50%",  photo: avatar },
+      { id: 10, name: "Сидоров Влад",  marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 11, name: "Конева Юля",    marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 12, name: "Сидоров Влад",  marks: 7,   attendance: "75",  done: "50%",  photo: avatar },
+      { id: 13, name: "Конева Юля",    marks: 3.7, attendance: "75",  done: "50%",  photo: avatar }
    ]);
 
    let [activeGroup, setActiveGroup] = useState({ name: 304, id: 1, level: 'Beginner', quantity: 12 });
@@ -91,14 +91,14 @@ function GroupsNStudents() {
                </div>
 
                <div className="profile_listOfGroups_addGroup">
-                  <button className="addGroup">+ Новая группа</button>
+                  <button id="addGroup" className="addGroup">+ Новая группа</button>
                </div>
             </div>
 
 
             <div className="profile_groupNumber">
                <h2 className="profile_groupNumber_h2">
-                  Группа {activeGroup.name}
+                  {activeGroup.name}
                </h2>
                <div className="profile_groupNumber_innerDiv">
                   <span className="profile_groupNumber_span">{activeGroup.level}</span>
