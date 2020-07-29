@@ -26,6 +26,8 @@ function Header() {
                <span className="material-icons magnifier">search</span>
                <input className="profile_search_input" id="search" type="text" size="60" placeholder="Поиск по группам, материалам..." />
             </div>
+            <button id="addCount" className="addCount" onClick={addNotificationCounter}>+notificator</button>
+            <button id="clearCount" className="clearCount" onClick={clearNotificationCounter}>to0notificator</button>
          </div>
 
 
